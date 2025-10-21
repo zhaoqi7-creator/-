@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 关键移动设备优化viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <!-- iOS设备特定优化 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="以太酒吧">
+    <link rel="apple-touch-icon" href="">
+    <!-- 其他优化 -->
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>以太酒吧 - 独特鸡尾酒体验</title>
+    
+    <!-- 性能优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- 使用更稳定的CDN版本 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <style>
+        /* 触摸反馈样式 */
+        .touch-feedback {
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.1s ease, opacity 0.1s ease;
+        }
+        
+        .touch-feedback:active {
+            transform: scale(0.98);
+            opacity: 0.8;
+        }
+        
+        /* 简单的过渡效果 */
+        body {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 移动端菜单遮罩层 -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>以太酒吧</h1>
+            <p class="slogan">"以太"是什么</p>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <button class="menu-toggle touch-feedback" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" class="active touch-feedback" data-page="home">首页</a></li>
+            <li><a href="#" class="touch-feedback" data-page="about">以太魔法</a></li>
+            <li><a href="#" class="touch-feedback" data-page="menu">酒单</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="content">
+        <!-- 首页 -->
+        <section id="home" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2>以太酒吧</h2>
+                    <p>以太是什么</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn touch-feedback" data-page="menu">探索酒单</a>
+                        <a href="#" class="btn secondary touch-feedback" data-page="about">以太是什么</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 酒吧文化页 -->
+        <section id="about" class="page">
+            <div class="about-container">
+                <h2 class="section-title">酒吧文化</h2>
+                
+                <div class="story-section">
+                    <div class="story-content">
+                        <h3>我们的故事</h3>
+                        <p>以太酒吧创立于2025年……</p>
+                        <p>以太魔法介绍or团队介绍。</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/RRGhIl32lG4u8X~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=nZWQ%2BAjE7pXiYe2MmT3Q5tHc%2FRQ%3D" alt="酒吧内部环境" style="width: 100%; height: auto; border-radius: 8px;">
+                    </div>
+                </div>
+                
+                <div class="philosophy-section">
+                    <div class="philosophy-image">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/50da29e8c00137ddc7ae9a258712c9fd~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=RaMhYdyyll9pNF7UV4HVmbi7uAY%3D" alt="酒吧装修风格" style="width: 100%; height: auto; border-radius: 8px;">
+                    </div>
+                    <div class="philosophy-content">
+                        <h3>我们的理念</h3>
+                        <p>在迷雾酒吧，我们相信每一杯鸡尾酒都是一件艺术品。我们坚持使用最优质的原料，精心挑选每一款基酒和配料，确保每一杯饮品都达到完美的平衡。</p>
+                        <p>我们不仅仅是一家酒吧，更是一个让人们放松、交流、分享美好时光的场所。我们希望通过我们的饮品和服务，为顾客带来难忘的夜晚。</p>
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <h3>我们的团队</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/8cc18ec75cbadfe8a3eb402916704548~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=XDovi0Fc%2F8MnucV2eeATjnbPrPI%3D" alt="调酒师" class="skeleton skeleton-img">
+                            <h4>陈钟炎</h4>
+                            <p>首席调酒师</p>
+                        </div>
+                        <div class="team-member">
+                            <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/506eeae8f7ec11cf27b19bbb45040978~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=X8rjPhPQxH8vW6Z0DokBB2zlti4%3D" alt="调酒师" class="skeleton skeleton-img">
+                            <h4>陈钦浩</h4>
+                            <p>创意总监</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 酒单页面 -->
+        <section id="menu" class="page">
+            <div class="menu-container">
+                <h2 class="section-title">精选酒单</h2>
+                
+                <div class="category-filter">
+                    <button class="category-btn active touch-feedback" data-category="all">全部</button>
+                    <button class="category-btn touch-feedback" data-category="perfume">香水鸡尾酒</button>
+                    <button class="category-btn touch-feedback" data-category="laboratory">实验室特调</button>
+                    <button class="category-btn touch-feedback" data-category="classic">经典鸡尾酒</button>
+                    <button class="category-btn touch-feedback" data-category="whiskey">威士忌纯饮</button>
+                </div>
+                
+                <div class="drinks-grid">
+                    <!-- 经典鸡尾酒 -->
+                    <div class="drink-card" data-category="classic">
+                        <img data-src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/f50d9ba71c2b4f04896bf61fc8350f2d~tplv-a9rns2rl98-image.image?rcl=202510212048239D52E8FC94A32FB3A5A3&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1763642925&x-signature=kcIacdERQKEeVzq0rdaSq5mF6TQ%3D" alt="古典鸡尾酒" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>古典|Old fashioned</h3>
+                            <p class="price">¥88</p>
+                            <button class="view-details touch-feedback" data-id="1">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card" data-category="classic">
+                        <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/3998af285bc517ff50fa43a1e2e0674c~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=DPhuUyhGxQj71sQvxSsF6TmP4y8%3D" alt="马天尼" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>马天尼|Martini</h3>
+                            <p class="price">¥98</p>
+                            <button class="view-details touch-feedback" data-id="2">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 特调系列 -->
+                    <div class="drink-card" data-category="signature">
+                        <img data-src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/a76aafaf0e6344279dd33f0b00144757~tplv-a9rns2rl98-image.image?rcl=202510212048239D52E8FC94A32FB3A5A3&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1763642925&x-signature=dE8YlU0jRu%2FSNuAL%2BTIC22shY2c%3D" alt="迷雾之吻" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>乌木沉香</h3>
+                            <p class="price">¥108</p>
+                            <button class="view-details touch-feedback" data-id="3">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card" data-category="signature">
+                        <img data-src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/ba02934bdf764148aa3c9635a32d274f~tplv-a9rns2rl98-image.image?rcl=202510212048239D52E8FC94A32FB3A5A3&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1763642925&x-signature=jNLl3tMHtR37Gk%2FUtxu97AFUnxs%3D" alt="彩虹幻境" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>彩虹幻境</h3>
+                            <p class="price">¥118</p>
+                            <button class="view-details touch-feedback" data-id="4">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 无酒精饮品 -->
+                    <div class="drink-card" data-category="non-alcoholic">
+                        <img data-src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/ba02934bdf764148aa3c9635a32d274f~tplv-a9rns2rl98-image.image?rcl=202510212048239D52E8FC94A32FB3A5A3&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1763642925&x-signature=jNLl3tMHtR37Gk%2FUtxu97AFUnxs%3D" alt="夏日梦境" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>夏日梦境</h3>
+                            <p class="price">¥68</p>
+                            <button class="view-details touch-feedback" data-id="5">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card" data-category="non-alcoholic">
+                        <img data-src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/ba02934bdf764148aa3c9635a32d274f~tplv-a9rns2rl98-image.image?rcl=202510212048239D52E8FC94A32FB3A5A3&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1763642925&x-signature=jNLl3tMHtR37Gk%2FUtxu97AFUnxs%3D" alt="果园精灵" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>果园精灵</h3>
+                            <p class="price">¥58</p>
+                            <button class="view-details touch-feedback" data-id="6">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 威士忌纯饮 -->
+                    <div class="drink-card" data-category="whiskey">
+                        <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/3998af285bc517ff50fa43a1e2e0674c~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=DPhuUyhGxQj71sQvxSsF6TmP4y8%3D" alt="麦卡伦12年" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>麦卡伦12年</h3>
+                            <p class="price">¥168</p>
+                            <button class="view-details touch-feedback" data-id="7">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card" data-category="whiskey">
+                        <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/3998af285bc517ff50fa43a1e2e0674c~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=DPhuUyhGxQj71sQvxSsF6TmP4y8%3D" alt="格兰菲迪18年" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>格兰菲迪18年</h3>
+                            <p class="price">¥228</p>
+                            <button class="view-details touch-feedback" data-id="8">查看详情</button>
+                        </div>
+                    </div>
+                    
+                    <div class="drink-card" data-category="whiskey">
+                        <img data-src="https://p11-doubao-search-sign.byteimg.com/labis/3998af285bc517ff50fa43a1e2e0674c~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1776602913&x-signature=DPhuUyhGxQj71sQvxSsF6TmP4y8%3D" alt="尊尼获加蓝牌" class="skeleton skeleton-img">
+                        <div class="drink-info">
+                            <h3>尊尼获加蓝牌</h3>
+                            <p class="price">¥298</p>
+                            <button class="view-details touch-feedback" data-id="9">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 鸡尾酒详情弹窗 -->
+    <div id="drink-modal" class="modal" role="dialog" aria-labelledby="modal-name" aria-modal="true">
+        <div class="modal-content modal-content-mobile">
+            <span class="close-btn touch-feedback">&times;</span>
+            <div class="drink-detail">
+                <img id="modal-image" src="" alt="鸡尾酒详情">
+                <div class="detail-info">
+                    <h2 id="modal-name">鸡尾酒名称</h2>
+                    <p class="price" id="modal-price">¥0</p>
+                    
+                    <div class="drink-meta">
+                        <div class="meta-item">
+                            <h4>基酒</h4>
+                            <p id="modal-base">基酒</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>度数</h4>
+                            <p id="modal-alcohol">0%</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>口味</h4>
+                            <p id="modal-taste">口味</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ingredients">
+                        <h4>配料</h4>
+                        <ul id="modal-ingredients">
+                            <!-- 配料列表 -->
+                        </ul>
+                    </div>
+                    
+                    <div class="description">
+                        <h4>描述</h4>
+                        <p id="modal-description">描述</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>联系我们</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 深圳市南山区西丽万科云城</p>
+                <p><i class="fas fa-phone"></i> +86 10 8888 8888</p>
+                <p><i class="fas fa-envelope"></i> info@mistbar.com</p>
+            </div>
+            
+            <div class="opening-hours">
+                <h3>营业时间</h3>
+                <p>周一至周四: 18:00 - 02:00</p>
+                <p>周五至周日: 18:00 - 04:00</p>
+            </div>
+            
+            <div class="social-media">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#" class="touch-feedback"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="touch-feedback"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="touch-feedback"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="touch-feedback"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 迷雾酒吧. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
